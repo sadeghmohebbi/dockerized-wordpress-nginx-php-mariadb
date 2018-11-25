@@ -13,16 +13,16 @@ use your own password and envs in [this file (mysql/Dockerfile)](https://github.
 ## 4. use commands below in root directory
 default provided docker compose file can be used
 
-<code>docker-compose up -d --build</code>
+<code>$ docker-compose up -d --build</code>
 
-to see what happens
+to see what happens:
 
-<code>docker-compose logs -f</code>
+<code>$ docker-compose logs -f</code>
 
 ## 5. install worpress
 first of all give permission to nginx container to write file (avoiding permission issue) according to [this stackoverflow question](https://stackoverflow.com/questions/44251019/wordpress-on-docker-could-not-create-directory-on-mounted-volume)
 
-<code>docker exec -it CONTAINER_ID /bin/bash</code>
+<code>$ docker exec -it CONTAINER_ID /bin/bash</code>
 
 inside nginx docker image use this commands:
 
@@ -38,9 +38,9 @@ inside nginx docker image use this commands:
 
 and then get worpress version you want from [official website](https://wordpress.org/download/) or simply use commands below:
 
-<code>cd ~wget https://wordpress.org/latest.tar.gz && tar -xvf latest.tar.gz</code>
+<code>$ cd ~wget https://wordpress.org/latest.tar.gz && tar -xvf latest.tar.gz</code>
 
-<code>yes | cp -r wordpress/* dockerized-wordpress-nginx-php-mariadb/public_html</code>
+<code>$ yes | cp -r wordpress/* dockerized-wordpress-nginx-php-mariadb/public_html</code>
 
 ## 6. enjoy
 use **mysql** as a mysql host name and **wordpress** as a database name, other values are based on your configuration in mysql dockerfile (step 3)
