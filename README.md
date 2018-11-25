@@ -1,4 +1,4 @@
-<img src="https://s.w.org/style/images/about/WordPress-logotype-wmark-white.png">
+![](https://s.w.org/style/images/about/WordPress-logotype-wmark.png)
 
 # wordpress+nginx+php+mariadb with docker
 
