@@ -40,7 +40,7 @@ inside nginx docker image use this commands:
 
 and then get worpress version you want from [official website](https://wordpress.org/download/) or simply use commands below:
 
-<code>$ cd ~wget https://wordpress.org/latest.tar.gz && tar -xvf latest.tar.gz</code>
+<code>$ cd ~ && wget https://wordpress.org/latest.tar.gz && tar -xvf latest.tar.gz</code>
 
 <code>$ yes | cp -r wordpress/* dockerized-wordpress-nginx-php-mariadb/public_html</code>
 
