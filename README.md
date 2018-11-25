@@ -1,4 +1,4 @@
-![](https://s.w.org/style/images/about/WordPress-logotype-wmark.png)
+![](https://s.w.org/style/images/about/WordPress-logotype-wordmark.png)
 
 # wordpress+nginx+php+mariadb with docker
 
