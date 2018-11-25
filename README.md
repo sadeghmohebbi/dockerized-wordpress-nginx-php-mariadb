@@ -12,8 +12,8 @@ first of all you need to install docker and docker compose, you can find it in [
 ## 3. edit mariadb dockerfile file
 use your own password and envs in [this file (mysql/Dockerfile)](https://github.com/sadeghmohebbi/dockerized-wordpress-nginx-php-mariadb/blob/master/mysql/Dockerfile)
 
-## 4. use commands below in root directory
-default provided docker compose file can be used
+## 4. run it
+use commands below in root directory. default provided docker compose file can be used
 
 <code>$ docker-compose up -d --build</code>
 
