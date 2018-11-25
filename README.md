@@ -1,3 +1,5 @@
+<img src="https://s.w.org/style/images/about/WordPress-logotype-wmark-white.png">
+
 # wordpress+nginx+php+mariadb with docker
 
 ## 1. install requirements
