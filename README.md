@@ -44,5 +44,5 @@ and then get worpress version you want from [official website](https://wordpress
 
 <code>$ yes | cp -r wordpress/* dockerized-wordpress-nginx-php-mariadb/public_html</code>
 
-## 6. enjoy
+## 6. last step
 use **mysql** as a mysql host name and **wordpress** as a database name, other values are based on your configuration in mysql dockerfile (step 3)
