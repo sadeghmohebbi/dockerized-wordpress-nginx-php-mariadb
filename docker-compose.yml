@@ -1,0 +1,52 @@
+version: '3.1'
+
+services:
+
+  # mysql database
+  mysql:
+    build: mysql/
+    container_name: mysql
+    volumes:
+      - ./mysql_db:/var/lib/mysql
+    restart: always
+    networks:
+      crv_dev_network:
+        aliases:
+          - mysql
+
+  # wordpress
+  php_app:
+    build: php_app/
+    container_name: php_app
+    volumes:
+      - ./public_html:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      crv_dev_network:
+        aliases:
+          - php_app
+
+  # TODO: phpMyAdmin can be added if needed
+  
+  # nginx
+  nginx:
+    build: nginx/
+    volumes:
+      - ./public_html:/var/www/html
+      - ./nginx_log:/var/log/nginx
+      - ./nginx_certs:/etc/nginx/ssl
+    ports:
+      - "80:80"
+    depends_on:
+      - php_app
+    networks:
+      crv_dev_network:
+        aliases:
+          - nginx
+
+networks:
+  crv_dev_network:
+    driver: bridge
