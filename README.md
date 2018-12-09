@@ -22,9 +22,9 @@ to see what happens:
 <code>$ docker-compose logs -f</code>
 
 ## 5. install wordpress
-first of all give permission to nginx container to write file (avoiding permission issue) according to [this stackoverflow question](https://stackoverflow.com/questions/44251019/wordpress-on-docker-could-not-create-directory-on-mounted-volume)
+first of all give permission to php-fpm container to write file (avoiding permission issue) according to [this stackoverflow question](https://stackoverflow.com/questions/44251019/wordpress-on-docker-could-not-create-directory-on-mounted-volume)
 
-<code>$ docker exec -it CONTAINER_ID /bin/bash</code>
+<code>$ docker exec -it PHP_CONTAINER_ID /bin/bash</code>
 
 inside nginx docker image use this commands:
 
