@@ -29,6 +29,19 @@ services:
         aliases:
           - php_app
 
+  # ftp server (for adding new plugins online)
+  ftp_server:
+    image: fikipollo/vsftpd:latest
+    volumes:
+      - ./public_html/html/FTP:/home/wordpress
+    environment:
+      - FTP_USER=wordpress
+      - FTP_PASS=rsXgHPhYFpHQsLIE
+    networks:
+      crv_dev_network:
+        aliases:
+          - ftp_server
+
   # TODO: phpMyAdmin can be added if needed
   
   # nginx
