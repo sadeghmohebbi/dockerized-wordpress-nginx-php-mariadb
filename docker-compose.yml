@@ -33,10 +33,10 @@ services:
   ftp_server:
     image: fikipollo/vsftpd:latest
     volumes:
-      - ./public_html/html/FTP:/home/wordpress
+      - ./public_html:/home/wordpress
     environment:
       - FTP_USER=wordpress
-      - FTP_PASS=rsXgHPhYFpHQsLIE
+      - FTP_PASS=Misb8k4XEXHi336X
     networks:
       crv_dev_network:
         aliases:
